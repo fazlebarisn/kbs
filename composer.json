@@ -1,0 +1,11 @@
+{
+    "name": "sony/kbs",
+    "description": "Awesome Plugin",
+    "type": "project",
+    "license": "GPL",
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {"Inc\\": "./inc"}
+    }
+}

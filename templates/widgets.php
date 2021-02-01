@@ -1,0 +1,1 @@
+<h1>This is Widgets page</h1>
