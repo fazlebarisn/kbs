@@ -86,19 +86,13 @@ class Admin extends BaseController
 
 	public function setSettings(){
 
-		$args = array();
-
-		// get $this->managers array from inc/Base/BaseController.php
-
-		foreach( $this->managers as $key => $value ){
-
-			$args[] = array(
+		$args = array(
+			array(
 				'option_group' => 'kbs_plugin_settings',
-				'option_name'  => $key,
-				'callback'     => array( $this->callbacks_mngr, 'checkboxSanitize' )
-			);
-
-		}
+				'option_name'  => 'kbs_plugin', // option name should be the same as page 
+				'callback'     => array( $this->callbacks_mngr, 'checkboxSanitize' ),
+			)			
+		);
 
 		$this->settings->setSettings( $args );
 	}	
@@ -131,6 +125,7 @@ class Admin extends BaseController
 				'page'     => 'kbs_plugin',
 				'section'  => 'kbs_admin_index',
 				'args'     => array(
+					'option_name' => 'kbs_plugin',
 					'label_for' => $key,
 					'class' => 'ui-toggle',
 		)
