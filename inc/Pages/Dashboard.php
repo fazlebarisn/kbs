@@ -9,14 +9,14 @@ use \Inc\Base\BaseController;
 use \Inc\Api\Callbacks\AdminCallbacks;
 use \Inc\Api\Callbacks\ManagerCallbacks;
 
-class Admin extends BaseController
+class Dashboard extends BaseController
 {
 	public $settings;
 	public $callbacks;
 	public $callbacks_mngr;
 
 	public $pages = array();
-	public $subpages = array();
+	//public $subpages = array();
 
 	public function register(){
 
@@ -25,14 +25,14 @@ class Admin extends BaseController
 		$this->callbacks_mngr = new ManagerCallbacks();
 
 		$this->setPages();
-		$this->setSubPages();
+		//$this->setSubPages();
 
 		$this->setSettings();
 		$this->setSections();
 		$this->setFields();
 
 
-		$this->settings->addPages($this->pages)->withSubPage('Dashbord')->addSubPages($this->subpages)->register();
+		$this->settings->addPages($this->pages)->withSubPage('Dashbord')->register();
 	}
 
 	public function setPages(){
@@ -49,7 +49,7 @@ class Admin extends BaseController
 		);
 
 	}
-
+/*
 	public function setSubPages(){
 		$this->subpages = array(
 			array(
@@ -78,7 +78,7 @@ class Admin extends BaseController
 			)
 		);
 	}
-
+*/
 	/*
 	* Register custom fiels section start 
 	* 'checkboxSanitize' callback  function is in the inc/Api/Callbacks/ManagerCallbacks.php file 
