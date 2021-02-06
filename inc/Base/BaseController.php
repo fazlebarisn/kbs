@@ -31,4 +31,13 @@ class BaseController
 		];
 
 	}
+
+
+	// Check the checkbox is checked or not from Dashbord page
+	public function activated( string $key ){
+
+		$option = get_option( 'kbs_plugin' );
+		return isset( $option[$key] ) ? $option[$key] : false;
+		
+	}
 }

@@ -49,36 +49,7 @@ class Dashboard extends BaseController
 		);
 
 	}
-/*
-	public function setSubPages(){
-		$this->subpages = array(
-			array(
-				'parent_slug'=> 'kbs_plugin',
-				'page_title' => 'Custom Post Type',
-				'menu_title' => 'CPT',
-				'capability' => 'manage_options',
-				'menu_slug'  => 'kbs_cpt',
-				'callback'   => array( $this->callbacks, 'adminCpt' )
-			),			
-			array(
-				'parent_slug'=> 'kbs_plugin',
-				'page_title' => 'Custom Taxonomies',
-				'menu_title' => 'Taxonomies',
-				'capability' => 'manage_options',
-				'menu_slug'  => 'kbs_taxonomies',
-				'callback'   => array( $this->callbacks, 'adminTaxonomy' )
-			),			
-			array(
-				'parent_slug'=> 'kbs_plugin',
-				'page_title' => 'Custom Widgets',
-				'menu_title' => 'Widgets',
-				'capability' => 'manage_options',
-				'menu_slug'  => 'kbs_widgets',
-				'callback'   => array( $this->callbacks, 'adminWidgets' )
-			)
-		);
-	}
-*/
+
 	/*
 	* Register custom fiels section start 
 	* 'checkboxSanitize' callback  function is in the inc/Api/Callbacks/ManagerCallbacks.php file 
